@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campfire gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+<main class="main">
+    <div class="topnav" id="Topnav">
+        <span class="search">
+            <input id="InpitID" type="text" name="InpitID" placeholder="Image ID">
+            <input id="InputButton" type="button" value="Ok" onclick="OnClick();"/>
+        </span>
+        <a id="-1000" href="">-1000</a>
+        <a id="-100" href="">-100</a>
+        <a id="-10" href="">-10</a>
+        <a id="+10" href="">+10</a>
+        <a id="+100" href="">+100</a>
+        <a id="+1000" href="">+1000</a>
+        <a href="javascript:void(0);" class="icon" onclick="TopNavSwitch()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <a id="prev" class="button prev" href="">&#10094;</a>
+    <a id="next" class="button next" href="">&#10095;</a>
+    <div class="image">
+        <img src="" id="image">
+    </div>
+
+</main>
+<script>
+    OnLoad()
+</script>
+</body>
+</html>
