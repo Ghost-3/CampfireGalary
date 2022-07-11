@@ -1,1 +1,1 @@
-# CampfireGalary
+# CampfireGallery
