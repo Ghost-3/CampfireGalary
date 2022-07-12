@@ -1,23 +1,22 @@
-function OnLoad() {
-    id = GetID();
-    InvalidImageHandler(id);
-    SetLinks(id);
+function onLoad() {
+    id = getID();
+    invalidImageHandler(id);
+    setLinks(id);
     
-    document.getElementById("InpitID")
-        .addEventListener("keyup", function(event) {
-        event.preventDefault();
-        if (event.keyCode === 13) {
-            OnClick();
-        }
-    });
+    Form = document.getElementById('Search');
+    Form.addEventListener('submit', onClick);
 }
 
-function OnClick() {
-    id = GetInpitID();
-    window.location.href = "?id=" + Number(id);
+function onClick(event) {
+    el = document.getElementById('inputID');
+    id = el.value;
+    if (id != "") {
+        return Number(id);
+    }
+    event.preventDefault()
 }
 
-function GetID() {
+function getID() {
     // Return image ID from URL
     var paramsString = document.location.search;
     var searchParams = new URLSearchParams(paramsString);
@@ -25,26 +24,16 @@ function GetID() {
     return Number(id);
 }
 
-function GetInpitID() {
-    // Return image ID from input
-    el = document.getElementById('InpitID');
-    id = el.value;
-    if (id != "") {
-        return Number(id);
-    }
-    return GetID();
-}
-
-function InvalidImageHandler(id) {
+function invalidImageHandler(id) {
     // If the image ID is invalid it redirects to the correct one 
-    if (id == null || id < 1 || !Number.isInteger(id)) {
+    if (!id || id < 1 || !Number.isInteger(id)) {
         window.location.href = "?id=1";
         // To prevent the request
         throw "Invalid image ID";
     }
 }
 
-function SetLinks(id) {
+function setLinks(id) {
     // Image link
     document.getElementById("image").src = 'https://campfire.moe/api/image/' + id;
     // Previous image button link
@@ -60,7 +49,7 @@ function SetLinks(id) {
     document.getElementById("+1000").href = '?id=' + (Number(id) + 1000);
 }
 
-function TopNavSwitch() {
+function topNavSwitch() {
     var x = document.getElementById("Topnav");
     if (x.className === "topnav") {
         x.className += " responsive";
@@ -69,3 +58,4 @@ function TopNavSwitch() {
     }
 }
 
+onLoad();
