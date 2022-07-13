@@ -56,6 +56,8 @@ function setLinks(id) {
     document.getElementById("+10").href = '?id=' + (Number(id) + 10);
     document.getElementById("+100").href = '?id=' + (Number(id) + 100);
     document.getElementById("+1000").href = '?id=' + (Number(id) + 1000);
+    // Download button
+    document.getElementById("dl").href = document.getElementById("image").src;
 }
 
 function topNavSwitch() {
