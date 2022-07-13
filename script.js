@@ -5,6 +5,15 @@ function onLoad() {
     
     Form = document.getElementById('Search');
     Form.addEventListener('submit', onClick);
+    
+    document.addEventListener("keyup", function(event) {
+        if (event.key == "ArrowLeft") {
+            document.getElementById('prev').click();
+        }
+        else if (event.key == "ArrowRight") {
+            document.getElementById('next').click();
+        }
+    });
 }
 
 function onClick(event) {
