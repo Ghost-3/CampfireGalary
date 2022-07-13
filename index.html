@@ -10,25 +10,25 @@
 </head>
 
 <body>
+<nav class="topnav" id="Topnav">
+    <form id="Search" class="search">
+        <input id="inputID" type="number" name="id" placeholder="Image ID">
+        <button id="inputButton" type="submit">Ok</button>
+    </form>
+    <a id="-1000" href="">-1000</a>
+    <a id="-100" href="">-100</a>
+    <a id="-10" href="">-10</a>
+    <a id="+10" href="">+10</a>
+    <a id="+100" href="">+100</a>
+    <a id="+1000" href="">+1000</a>
+    <button class="icon" onclick="topNavSwitch()">
+        <i class="fa fa-bars"></i>
+    </button>
+</nav>
 <main class="main">
-    <div class="topnav" id="Topnav">
-        <form id="Search" class="search">
-            <input id="inputID" type="number" name="id" placeholder="Image ID">
-            <button id="inputButton" type="submit">Ok</button>
-        </form>
-        <a id="-1000" href="">-1000</a>
-        <a id="-100" href="">-100</a>
-        <a id="-10" href="">-10</a>
-        <a id="+10" href="">+10</a>
-        <a id="+100" href="">+100</a>
-        <a id="+1000" href="">+1000</a>
-        <button class="icon" onclick="topNavSwitch()">
-            <i class="fa fa-bars"></i>
-        </button>
-    </div>
     <a id="prev" class="prev" href="">&#10094;</a>
     <a id="next" class="next" href="">&#10095;</a>
-    <img src="" id="image">
+    <img src="" id="image" alt="The image is missing :(" loading="lazy">
 </main>
 <script src="script.js"></script>
 </body>
