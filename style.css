@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body {
-    background-color: #18181b;
-    font-family: 'Roboto', times;
+:root {
+    --main-bg: #18181b;
+    --topnav-bg: rgba(0,0,0,0.3);
+    --topnav-hover: rgba(0,0,0,0.5);
+    --text-color: #ccc;
+    --arrow-color: white;
+    --arrow-bg: rgba(0,0,0,0.8);
+    --transparent: rgba(0,0,0,0)
 }
+
+body {
+    background-color: var(--main-bg);
+    font-family: 'Roboto', times;
+    color: var(--text-color);
+    font-size: 17px;
+}
+
+/* Remove spinner */
 
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -18,59 +32,51 @@ input[type=number] {
 
 .topnav {
     overflow: hidden;
-    background-color: #27272a;
+    background-color: var(--topnav-bg);
     border-radius: 5px;
 }
 
-.topnav a{
+.topnav a, input, button {
     float: left;
     display: block;
-    color: #ccc;
+    color: var(--text-color);
     text-align: center;
     text-decoration: none;
     font-size: 17px;
-}
-
-.topnav a {
     padding: 14px 16px;
+    background-color: var(--transparent);
+    transition: 0.6s ease;
 }
 
-.topnav .search input, button {
-    float: left;
-    display: block;
-    color: #ccc;
-    text-align: center;
+input, button {
     padding: 13px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    background-color: #27272a;
     border: 0px;
-    border-bottom: 1px solid #27272a;
 }
 
 #inputButton {
-    background-color: #27272a;
-    border-bottom: 1px solid #27272a;
-    border-left: 2px solid #27272a;
-    border-right: 2px solid #27272a;
     margin-right: 5px;
+}
+
+button {
+    background-color: var(--transparent);
+    border-bottom: 1px solid var(--transparent);
 }
 
 #inputID {
     max-width: 100px;
-    background-color: #3f3f46;
+    background-color: var(--topnav-hover);
+    border-bottom: 1px solid var(--topnav-hover);
 }
 
-#inputButton:hover {
+#inputButton:hover, #inputButton:active {
+    border-bottom: 1px solid var(--topnav-hover);
+}
+
+.topnav a:hover, button:hover, #inputButton:hover,
+.topnav a:active, button:active, #inputButton:active {
     cursor: pointer;
-    background-color: #3f3f46;
-    border-bottom: 1px solid #3f3f46;
-    border-left: 2px solid #27272a;
-}
-
-.topnav a:hover, .icon:hover {
-    background-color: #3f3f46;
-    color: #ccc;
+    background-color: var(--topnav-hover);
+    color: var(--text-color);
 }
 
 .topnav .icon {
@@ -92,7 +98,7 @@ input[type=number] {
         right: 0;
         top: 0;
     }
-    .topnav.responsive a, .search {
+    .topnav.responsive a, .topnav.responsive.search {
         float: none;
         display: block;
         text-align: left;
@@ -107,6 +113,12 @@ input[type=number] {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+    max-width: 100%;
+    max-height: 100%;
+    
+    color: var(text-color);
+    text-align: center;
+    border-radius: 3px;
 }
 
 .prev, .next {
@@ -116,7 +128,7 @@ input[type=number] {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: var(--arrow-color);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -129,6 +141,7 @@ input[type=number] {
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover, .next:hover,
+.prev:active, .next:active {
+    background-color: var(--arrow-bg);
 }
