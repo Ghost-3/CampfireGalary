@@ -13,7 +13,9 @@
 <nav class="topnav" id="Topnav">
     <form id="Search" class="search">
         <input id="inputID" type="number" name="id" placeholder="Image ID">
-        <button id="inputButton" type="submit">Ok</button>
+        <button id="inputButton" type="submit">
+            <i class="fa fa-check"></i>
+        </button>
     </form>
     <a id="-1000" href="">-1000</a>
     <a id="-100" href="">-100</a>
@@ -21,8 +23,8 @@
     <a id="+10" href="">+10</a>
     <a id="+100" href="">+100</a>
     <a id="+1000" href="">+1000</a>
-    <a id="dl" href="" download target="_blank">
-        Скачать <i class="fa fa-download"></i>
+    <a href="extended/list.html">
+        Extend <i class="fa fa-toggle-off"></i>
     </a>
     <button class="icon" onclick="topNavSwitch()">
         <i class="fa fa-bars"></i>
@@ -31,7 +33,7 @@
 <main class="main">
     <a id="prev" class="prev" href="">&#10094;</a>
     <a id="next" class="next" href="">&#10095;</a>
-    <img src="" id="image" alt="The image is missing :(">
+    <img src="" id="image">
 </main>
 <script src="script.js"></script>
 </body>
