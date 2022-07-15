@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campfire gallery</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="../favicon.png"/>
+</head>
+
+<body>
+<nav class="topnav" id="Topnav">
+    <form id="Search" class="search">
+        <input id="inputOffset" type="number" name="offset" placeholder="Offset">
+        <button id="inputButton" type="submit">
+            <i class="fa fa-check"></i> <!-- Edited -->
+        </button>
+    </form>
+    <a id="-1000" href="">-1000</a>
+    <a id="-100" href="">-100</a>
+    <a id="-10" href="">-10</a>
+    <a id="+10" href="">+10</a>
+    <a id="+100" href="">+100</a>
+    <a id="+1000" href="">+1000</a>
+    <a href="../index.html">
+        Extend <i class="fa fa-toggle-on"></i>
+    </a>
+    <button class="icon" onclick="topNavSwitch()">
+        <i class="fa fa-bars"></i>
+    </button>
+</nav>
+<main class="main">
+<div id="gallery" class="row"></div>
+<p>
+    <a id="prev" href="">Prev</a>
+    <a id="next" href="">Next</a>
+</p>
+</main>
+<script src="list.js"></script>
+</body>
+</html>
