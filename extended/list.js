@@ -49,6 +49,8 @@ function setLinks(offset, step) {
     document.getElementById("+10").href = '?offset=' + (Number(offset) + step * 10);
     document.getElementById("+100").href = '?offset=' + (Number(offset) + step * 100);
     document.getElementById("+1000").href = '?offset=' + (Number(offset) + step * 1000);
+    // Extend button
+    document.getElementById("Switch").href += '?id=' + (Number(offset));
 }
 
 function sleep(ms) {
