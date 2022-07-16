@@ -58,6 +58,8 @@ function setLinks(id) {
     document.getElementById("+10").href = '?id=' + (Number(id) + 10);
     document.getElementById("+100").href = '?id=' + (Number(id) + 100);
     document.getElementById("+1000").href = '?id=' + (Number(id) + 1000);
+    // Extend button
+    document.getElementById("Switch").href += '?offset=' + (Number(id));
 }
 
 function topNavSwitch() {
