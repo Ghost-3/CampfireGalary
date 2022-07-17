@@ -8,7 +8,9 @@ function onLoad() {
     Form = document.getElementById('Search');
     Form.addEventListener('submit', onClick);
     
-    document.getElementById("inputOffset").placeholder = Number(offset);
+    input = document.getElementById("inputID");
+    input.placeholder = Number(id);
+    input.focus();
 }
 
 function onClick(event) {
