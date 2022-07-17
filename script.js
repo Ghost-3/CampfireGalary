@@ -15,7 +15,9 @@ function onLoad() {
         }
     });
     
-    document.getElementById("inputID").placeholder = Number(id);
+    input = document.getElementById("inputID");
+    input.placeholder = Number(id);
+    input.focus();
 }
 
 function onClick(event) {
