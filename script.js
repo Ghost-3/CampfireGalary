@@ -13,6 +13,9 @@ function onLoad() {
         else if (event.key == "ArrowRight") {
             document.getElementById('next').click();
         }
+        else if (event.key == "Enter") {
+            document.getElementById('inputButton').click();
+        }
     });
     
     input = document.getElementById("inputID");
