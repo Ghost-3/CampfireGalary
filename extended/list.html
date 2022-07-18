@@ -13,7 +13,7 @@
 <body>
 <nav class="topnav" id="Topnav">
     <form id="Search" class="search">
-        <input id="inputOffset" type="number" name="offset" placeholder="Offset">
+        <input id="inputOffset" type="number" name="offset" placeholder="Offset" onkeydown="javascript: return event.key === 'Backspace' || event.keyCode === 'Delete' ? true : !isNaN(Number(event.key))" min="1">
         <button id="inputButton" type="submit">
             <i class="fa fa-check"></i> <!-- Edited -->
         </button>
@@ -41,6 +41,9 @@
         <i class="fa fa-arrow-right"></i>
     </a>
 </p>
+<button id="backToTop" class="top" onclick="scrollToTop(1000)">
+    <i class="fa fa-angle-up"></i>
+</button>
 </main>
 <script src="list.js"></script>
 </body>
