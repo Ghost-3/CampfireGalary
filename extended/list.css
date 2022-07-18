@@ -39,7 +39,12 @@ a {
     position: relative;
 }
 
-a:hover {
+p a {
+    border: 0px;
+}
+
+a:hover, button:hover,
+a:active, button:active {
     background-color: var(--button-hover);
 }
 
@@ -47,4 +52,12 @@ a:hover {
     max-width: 100px;
     background-color: var(--topnav-hover);
     border-bottom: 1px solid var(--topnav-hover);
+}
+
+.top {
+    position: fixed; 
+    right: 20px; 
+    bottom: 20px; 
+    background-color: var(--button-bg);
+    border: 0px;
 }
