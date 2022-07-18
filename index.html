@@ -12,7 +12,7 @@
 <body>
 <nav class="topnav" id="Topnav">
     <form id="Search" class="search">
-        <input id="inputID" type="number" name="id" placeholder="Image ID">
+        <input id="inputID" type="number" name="id" placeholder="Image ID" onkeydown="javascript: return event.key === 'Backspace' || event.keyCode === 'Delete' ? true : !isNaN(Number(event.key))" min="1">
         <button id="inputButton" type="submit">
             <i class="fa fa-check"></i>
         </button>
