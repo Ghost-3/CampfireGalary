@@ -24,9 +24,8 @@ function onLoad() {
 }
 
 function onClick(event) {
-    el = document.getElementById('inputID');
-    id = el.value;
-    if (id != "") {
+    id = document.getElementById('inputID').value;
+    if (idValidator(id)) {
         return Number(id);
     }
     event.preventDefault()
@@ -42,11 +41,16 @@ function getID() {
 
 function invalidImageHandler(id) {
     // If the image ID is invalid it redirects to the correct one 
-    if (!id || id < 1 || !Number.isInteger(id)) {
+    if (idValidator(id)) {
         window.location.href = "?id=1";
         // To prevent the request
         throw "Invalid image ID";
     }
+}
+
+function idValidator(id) {
+    if (!id || id < 1 || !Number.isInteger(id)) return true
+    else return false
 }
 
 function setLinks(id) {
